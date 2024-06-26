@@ -41,16 +41,16 @@ async def unpack_provisioning_request(
 
     """  # noqa: E501
 
-    if not provisioning_request.descriptorKind == DescriptorKind.COMPONENT_DESCRIPTOR:
+    if not provisioning_request.descriptorKind == DescriptorKind.DATAPRODUCT_DESCRIPTOR:
         error = (
-            "Expecting a COMPONENT_DESCRIPTOR but got a "
+            "Expecting a DATAPRODUCT_DESCRIPTOR but got a "
             f"{provisioning_request.descriptorKind} instead; please check with the "
             f"platform team."
         )
         return ValidationError(errors=[error])
     try:
         request = yaml.safe_load(provisioning_request.descriptor)
-        data_product = parse_yaml_with_model(request.get("dataProduct"), DataProduct)
+        data_product = parse_yaml_with_model(request.get("dataproduct"), DataProduct)
         component_to_provision = request.get("componentIdToProvision")
 
         if isinstance(data_product, DataProduct):

@@ -38,6 +38,20 @@ This microservice is written in Python 3.11, using FastAPI for the HTTP layer. P
 - Python 3.11.x (this is a **strict** requirement as of now, due to uvloop 0.17.0)
 - Poetry
 
+
+**Install Python 3.11:**
+
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.11
+python3.11 --version
+which python3.11
+```
+
+
 **Installing**:
 
 To set up a Python environment we use [Poetry](https://python-poetry.org/docs/):
@@ -52,12 +66,18 @@ Once Poetry is installed and in your `$PATH`, you can execute the following:
 poetry --version
 ```
 
+
 If you see something like `Poetry (version x.x.x)`, your install is ready to use!
 
 Install the dependencies defined in `specific-provisioner/pyproject.toml`:
 
 ```
+
+
 cd specific-provisioner
+
+poetry env use /full/path/to/python3.11
+
 poetry install
 ```
 
