@@ -4,11 +4,11 @@
     </a>
 </p>
 
-Designed by [Agile Lab](https://www.agilelab.it/), witboost is a versatile platform that addresses a wide range of sophisticated data engineering challenges. It enables businesses to discover, enhance, and productize their data, fostering the creation of automated data platforms that adhere to the highest standards of data governance. Want to know more about witboost? Check it out [here](https://www.agilelab.it/witboost) or [contact us!](https://www.agilelab.it/contacts)
+Designed by [Agile Lab](https://www.agilelab.it/), witboost is a versatile platform that addresses a wide range of sophisticated data engineering challenges. It enables businesses to discover, enhance, and productize their data, fostering the creation of automated data platforms that adhere to the highest standards of data governance. Want to know more about witboost? Check it out [here](https://www.witboost.com) or [contact us!](https://www.witboost.com/contacts)
 
 This repository is part of our [Starter Kit](https://github.com/agile-lab-dev/witboost-starter-kit) meant to showcase witboost's integration capabilities and provide a "batteries-included" product.
 
-# Python Scaffold
+# DCAT OWL Adapter
 
 - [Overview](#overview)
 - [Building](#building)
@@ -19,13 +19,23 @@ This repository is part of our [Starter Kit](https://github.com/agile-lab-dev/wi
 
 ## Overview
 
-This project provides a scaffold to develop a Specific Provisioner from scratch using Python & FastAPI.
+This project provides a prototype for integrating in Witboost whatever data catalog supports DCAT and OWL in an RDF triple store.
 
-### What's a Specific Provisioner?
+![image](https://github.com/agile-lab/DCAT-Adapter/assets/1837799/b04e0090-df40-450a-98ab-9ace21b5584a)
 
-A Specific Provisioner is a microservice which is in charge of deploying components that use a specific technology. When the deployment of a Data Product is triggered, the platform generates it descriptor and orchestrates the deployment of every component contained in the Data Product. For every such component the platform knows which Specific Provisioner is responsible for its deployment, and can thus send a provisioning request with the descriptor to it so that the Specific Provisioner can perform whatever operation is required to fulfill this request and report back the outcome to the platform.
+This integration supports two different operations:
+1) At build time: Business Terms retrieving: we can retrieve the business terms from the reference ontology by querying the SPARQL endpoint and pushing down filters like the domain or other specific context
+2) At deploy time: Push in the knowledge graph all the data contracts defined in Witboost, linking them with the ontology and adding all the needed metadata
 
-You can learn more about how the Specific Provisioners fit in the broader picture [here](https://docs.witboost.agilelab.it/docs/p2_arch/p1_intro/#deploy-flow).
+For this experiment, we used the FIBO Ontology, downloading it in the RDF triple store and using it to facilitate the tagging of dataset with business domain specific terms.
+
+
+
+### What's a Tech Adapter?
+
+A Tech Provisioner is a microservice that is in charge of integrating a target technology in a bi-directional way. When the deployment of a Data Product is triggered, the platform generates its descriptor and orchestrates the deployment of every component contained in the Data Product. For every such component the platform knows which Tech Adapter is responsible for its deployment, and can thus send a provisioning request with the descriptor to it so that the Tech Adapter can perform whatever operation is required to fulfill this request and report back the outcome to the platform.
+
+You can learn more about how the Specific Provisioners fit in the broader picture [here](https://docs.witboost.com/docs/p2_arch/p1_intro/#deploy-flow).
 
 ### Software stack
 
@@ -145,9 +155,9 @@ Agile Lab creates value for its Clients in data-intensive environments through c
 
 Since 2014 we have implemented 100+ successful Elite Data Engineering initiatives and used that experience to create Witboost: a technology agnostic, modular platform, that empowers modern enterprises to discover, elevate and productize their data both in traditional environments and on fully compliant Data mesh architectures.
 
-[Contact us](https://www.agilelab.it/contacts) or follow us on:
+[Contact us](https://www.witboost.com/contacts) or follow us on:
 
-- [LinkedIn](https://www.linkedin.com/company/agile-lab/)
+- [LinkedIn](https://www.linkedin.com/company/witboost/)
 - [Instagram](https://www.instagram.com/agilelab_official/)
 - [YouTube](https://www.youtube.com/channel/UCTWdhr7_4JmZIpZFhMdLzAA)
 - [Twitter](https://twitter.com/agile__lab)
