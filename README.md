@@ -27,7 +27,11 @@ This integration supports two different operations:
 1) At build time: Business Terms retrieving: we can retrieve the business terms from the reference ontology by querying the SPARQL endpoint and pushing down filters like the domain or other specific context
 2) At deploy time: Push in the knowledge graph all the data contracts defined in Witboost, linking them with the ontology and adding all the needed metadata
 
-For this experiment, we used the FIBO Ontology, downloading it in the RDF triple store and using it to facilitate the tagging of dataset with business domain specific terms.
+For this experiment, we used the FIBO Ontology, downloading it in the RDF triple store and using it to facilitate the tagging of dataset with business domain-specific terms.
+
+Here an example of the result
+![image](https://github.com/agile-lab/DCAT-Adapter/assets/1837799/44b602fc-980f-4062-b8d5-925ef5060191)
+
 
 
 
