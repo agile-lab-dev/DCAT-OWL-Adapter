@@ -19,7 +19,7 @@ This repository is part of our [Starter Kit](https://github.com/agile-lab-dev/wi
 
 ## Overview
 
-This project provides a prototype for integrating into Witboost whatever data catalog supports DCAT and OWL in an RDF triple store.
+This project provides a prototype for integrating into Witboost whatever data catalog supports [DCAT](https://www.w3.org/TR/vocab-dcat-3/) and [OWL](https://www.w3.org/OWL/) in an [RDF](https://www.w3.org/RDF/) triple store.
 
 ![image](https://github.com/agile-lab/DCAT-Adapter/assets/1837799/b04e0090-df40-450a-98ab-9ace21b5584a)
 
