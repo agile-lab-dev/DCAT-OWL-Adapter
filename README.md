@@ -19,7 +19,7 @@ This repository is part of our [Starter Kit](https://github.com/agile-lab-dev/wi
 
 ## Overview
 
-This project provides a prototype for integrating in Witboost whatever data catalog supports DCAT and OWL in an RDF triple store.
+This project provides a prototype for integrating into Witboost whatever data catalog supports DCAT and OWL in an RDF triple store.
 
 ![image](https://github.com/agile-lab/DCAT-Adapter/assets/1837799/b04e0090-df40-450a-98ab-9ace21b5584a)
 
@@ -29,9 +29,11 @@ This integration supports two different operations:
 
 For this experiment, we used the FIBO Ontology, downloading it in the RDF triple store and using it to facilitate the tagging of dataset with business domain-specific terms.
 
-Here an example of the result
+Here is an example of the result
 ![image](https://github.com/agile-lab/DCAT-Adapter/assets/1837799/44b602fc-980f-4062-b8d5-925ef5060191)
 
+
+This prototype creates an embedded RDF triple store and is populated with FIBO ontology for testing purposes.
 
 
 
